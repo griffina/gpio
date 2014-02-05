@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 	"syscall"
+	"time"
 )
 
 //By default, pins 14 and 15 boot to UART mode, so they are going to be ignored for now.
@@ -249,6 +250,7 @@ func expose(pin int) (string, error) {
 	if _, statErr := os.Stat(pinBase); os.IsNotExist(statErr) {
 		err = writeFile(filepath.Join(gpiobase, "export"), "%d", pin)
 	}
+	time.Sleep(100 * time.Millisecond)
 	return pinBase, err
 }
 
