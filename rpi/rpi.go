@@ -83,21 +83,42 @@ const (
 	BCM2835_GPIO_FSEL_ALT5        = 0x2 // Alternate function 5
 	BCM2835_GPIO_FSEL_MASK uint32 = 0x7
 
-	GPIO_P1_12 = 18
-	GPIO_P1_13 = 27
-	GPIO_P1_15 = 22
-	GPIO_P1_18 = 24
-	GPIO_P1_22 = 25
-	GPIO_P1_16 = 23
+	// See: http://elinux.org/Rpi_Low-level_peripherals
+	GPIO_P1_03 = 2 //2 for rev2, 0 for rev 1
+	GPIO_P1_05 = 3 //3 for rev2, 1 for rev 1
+	GPIO_P1_07 = 4
+	GPIO_P1_08 = 14
+	GPIO_P1_10 = 15
 	GPIO_P1_11 = 17
+	GPIO_P1_12 = 18
+	GPIO_P1_13 = 27 //27 for rev2 21 for rev 1
+	GPIO_P1_15 = 22
+	GPIO_P1_16 = 23
+	GPIO_P1_18 = 24
+	GPIO_P1_19 = 10
+	GPIO_P1_21 = 9
+	GPIO_P1_22 = 25
+	GPIO_P1_23 = 11
+	GPIO_P1_24 = 8
+	GPIO_P1_26 = 7
 
-	GPIO21 = GPIO_P1_13
+	GPIO02 = GPIO_P1_03 //2 for rev2, 0 for rev 1
+	GPIO03 = GPIO_P1_05 //3 for rev2, 1 for rev 1
+	GPIO04 = GPIO_P1_07
+	GPIO07 = GPIO_P1_26
+	GPIO08 = GPIO_P1_24
+	GPIO09 = GPIO_P1_21
+	GPIO10 = GPIO_P1_19
+	GPIO11 = GPIO_P1_23
+	GPIO14 = GPIO_P1_08
+	GPIO15 = GPIO_P1_10
+	GPIO17 = GPIO_P1_11
+	GPIO18 = GPIO_P1_12
 	GPIO22 = GPIO_P1_15
 	GPIO23 = GPIO_P1_16
-	GPIO25 = GPIO_P1_22
 	GPIO24 = GPIO_P1_18
-	GPIO27 = GPIO_P1_13
-	GPIO17 = GPIO_P1_11
+	GPIO25 = GPIO_P1_22
+	GPIO27 = GPIO_P1_13 //27 for rev2 21 for rev 1
 )
 
 func initRPi() {
